@@ -7,6 +7,8 @@ import net.bytebuddy.implementation.bind.annotation.*;
 /**
  * A proxy configuration facilitates the definition of an interceptor object that decides on the behavior of a proxy. This interface is
  * meant for internal only.
+ *<p>
+ * Heavily inspired by the <a href="https://github.com/hibernate/hibernate-orm/blob/main/hibernate-core/src/main/java/org/hibernate/proxy/ProxyConfiguration.java">Hibernate implementation</a>.
  */
 public interface ProxyConfiguration {
 
