@@ -62,7 +62,6 @@ public interface ProxyConfiguration {
          * @param invoked     The invoked method.
          * @param original    The original method, target of the invocation.
          * @param arguments   The method arguments.
-         * @param stubValue   The intercepted method's default value.
          * @param interceptor The proxy object's interceptor instance.
          * @return The intercepted method's return value.
          *

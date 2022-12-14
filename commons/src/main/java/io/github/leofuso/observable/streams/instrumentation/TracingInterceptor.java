@@ -23,7 +23,7 @@ public class TracingInterceptor<KIn, VIn, KOut, VOut> implements ProxyConfigurat
     @SuppressWarnings("unchecked")
     public Object intercept(final Object instance, final Method invoked, final Method original, final Object[] arguments) throws Throwable {
         final Processor<KIn, VIn, KOut, VOut> delegate = (Processor<KIn, VIn, KOut, VOut>) original.invoke(invoked);
-        final TracingProcessorSupplier<?, ?, ?, ?> tracingSupplier = new TracingProcessorSupplier<>(tracer, propagator, delegate);
+        final TracingProcessorSupplier<KIn, VIn, KOut, VOut> tracingSupplier = new TracingProcessorSupplier<>(tracer, propagator, delegate);
         return tracingSupplier.get();
     }
 }
